@@ -46,6 +46,8 @@ void back()
  digitalWrite(in2,HIGH);
  digitalWrite(in3,LOW);
  digitalWrite(in4,HIGH);
+ delay(500);
+ mStop();
 }
  
 void turnleft()
@@ -54,6 +56,8 @@ void turnleft()
  digitalWrite(in2,LOW);
  digitalWrite(in3,LOW);
  digitalWrite(in4,HIGH);
+ delay(100);
+ mStop();
 }
  
 void turnright()
@@ -62,6 +66,8 @@ void turnright()
  digitalWrite(in2,HIGH);
  digitalWrite(in3,HIGH);
  digitalWrite(in4,LOW);
+ delay(100);
+ mStop();
 } 
 
 void mStop()
@@ -218,12 +224,12 @@ void loop()
       if(rightDistance>leftDistance)  
       {
         turnright();
-        delay(450);
+        delay(100);
        }
        else if(rightDistance<leftDistance)
        {
         turnleft();
-        delay(450);
+        delay(100);
        }
        else
        {
